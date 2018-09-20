@@ -20,7 +20,7 @@ git clone https://github.com/callicoder/spring-boot-mysql-rest-api-tutorial.git
 
 **2. Create Mysql database**
 ```bash
-create database notes_app
+create database domotic_app
 ```
 
 **3. Change mysql username and password as per your installation**
@@ -33,7 +33,7 @@ create database notes_app
 
 ```bash
 mvn package
-java -jar target/easy-notes-1.0.0.jar
+java -jar target/domotic-app-1.0.0.jar
 ```
 
 Alternatively, you can run the app without packaging it using -
@@ -48,20 +48,15 @@ The app will start running at <http://localhost:8080>.
 
 The app defines following CRUD APIs.
 
-    GET /api/notes
+    GET /api/homes
     
-    POST /api/notes
+    POST /api/homes
     
-    GET /api/notes/{noteId}
+    GET /api/homes/{homeId}
     
-    PUT /api/notes/{noteId}
+    PUT /api/homes/{homeId}
     
-    DELETE /api/notes/{noteId}
+    DELETE /api/homes/{homesId}
 
 You can test them using postman or any other rest client.
 
-## Learn more
-
-You can find the tutorial for this application on my blog -
-
-<https://www.callicoder.com/spring-boot-rest-api-tutorial-with-mysql-jpa-hibernate/>
