@@ -15,7 +15,7 @@ Build Restful CRUD API for a simple domotic application using Spring Boot, Mysql
 **1. Clone the application**
 
 ```bash
-git clone https://github.com/callicoder/spring-boot-mysql-rest-api-tutorial.git
+git clone git@github.com:vrglx33/domoticApp.git
 ```
 
 **2. Create Mysql database**
