@@ -26,7 +26,6 @@ public class Sensor {
     @NotBlank
     private String name;
 
-    @NotBlank
     private Boolean status;
 
     @NotBlank

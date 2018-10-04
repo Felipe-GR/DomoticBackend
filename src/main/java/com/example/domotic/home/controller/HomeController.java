@@ -19,23 +19,23 @@ public class HomeController {
 
     @Autowired
     HomeRepository homeRepository;
-
+    @CrossOrigin(origins = "http://localhost:4200")
     @GetMapping("/homes")
     public List<Home> getAllHomes() {
         return homeRepository.findAll();
     }
-
+    @CrossOrigin(origins = "http://localhost:4200")
     @PostMapping("/homes")
     public Home createHome(@Valid @RequestBody Home home) {
         return homeRepository.save(home);
     }
-
+    @CrossOrigin(origins = "http://localhost:4200")
     @GetMapping("/homes/{id}")
     public Home getHomeById(@PathVariable(value = "id") Long noteId) {
         return homeRepository.findById(noteId)
                 .orElseThrow(() -> new ResourceNotFoundException("Home", "id", noteId));
     }
-
+    @CrossOrigin(origins = "http://localhost:4200")
     @PutMapping("/homes/{id}")
     public Home updateHome(@PathVariable(value = "id") Long homeId,
                                            @Valid @RequestBody Home homeDetails) {

@@ -37,6 +37,7 @@ public class Home {
     private String longitude;
 
     @OneToMany(mappedBy="home")
+    @JsonIgnoreProperties("home")
     private Set<Sensor> sensors;
 
 

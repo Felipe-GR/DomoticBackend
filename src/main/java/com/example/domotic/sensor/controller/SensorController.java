@@ -24,21 +24,25 @@ public class SensorController {
     @Autowired
     HomeRepository homeRepository;
 
+    @CrossOrigin(origins = "http://localhost:4200")
     @GetMapping("/sensors")
     public List<Sensor> getAllSensors() {
         return sensorRepository.findAll();
     }
 
+    @CrossOrigin(origins = "http://localhost:4200")
     @PostMapping("/sensors")
     public Sensor createSensor(@Valid @RequestBody Sensor sensor) {
         return sensorRepository.save(sensor);
     }
 
+    @CrossOrigin(origins = "http://localhost:4200")
     @GetMapping("/sensors/{id}")
     public Sensor getSensorById(@PathVariable(value = "id") Long sensorId) {
         return sensorRepository.findById(sensorId).orElseThrow(() -> new RuntimeException("error finding sensor"));
     }
 
+    @CrossOrigin(origins = "http://localhost:4200")
     @PutMapping("/sensors/{id}")
     public Sensor updateSensor(@PathVariable(value = "id") Long sensorId,
                            @Valid @RequestBody Sensor sensorDetails) {
@@ -56,6 +60,7 @@ public class SensorController {
         return updatedSensor;
     }
 
+    @CrossOrigin(origins = "http://localhost:4200")
     @DeleteMapping("/sensors/{id}")
     public ResponseEntity<?> deleteSensor(@PathVariable(value = "id") Long sensorId) {
         Sensor home = sensorRepository.findById(sensorId)
